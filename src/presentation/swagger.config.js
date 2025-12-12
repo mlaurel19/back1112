@@ -69,6 +69,28 @@ const swaggerDefinition = {
             example: ['user']
           }
         }
+      },
+      Role: {
+        type: 'object',
+        properties: {
+          id: {
+            type: 'string',
+            example: '60c72b2f9b1e8a001f8e4cab'
+          },
+          name: {
+            type: 'string',
+            example: 'admin'
+          }
+        }
+      },
+      RoleInput: {
+        type: 'object',
+        properties: {
+          name: {
+            type: 'string',
+            example: 'admin'
+          }
+        }
       }
     }
   },
