@@ -7,6 +7,20 @@ const swaggerDefinition = {
     version: '1.0.0',
     description: 'Documentation for the API',
   },
+  tags: [
+    {
+      name: 'Users',
+      description: 'Operations about users',
+    },
+    {
+      name: 'Roles',
+      description: 'Operations about roles',
+    },
+    {
+      name: 'Products',
+      description: 'Operations about products',
+    },
+  ],
   servers: [
     {
       url: `http://localhost:${process.env.PORT || 8080}/api/v1`,
@@ -89,6 +103,68 @@ const swaggerDefinition = {
           name: {
             type: 'string',
             example: 'admin'
+          }
+        }
+      },
+      Product: {
+        type: 'object',
+        properties: {
+          id: {
+            type: 'string',
+            example: '60d21b4667d0d8992e610c85'
+          },
+          name: {
+            type: 'string',
+            example: 'Laptop'
+          },
+          description: {
+            type: 'string',
+            example: 'A powerful laptop'
+          },
+          price: {
+            type: 'number',
+            example: 1200
+          },
+          stock: {
+            type: 'integer',
+            example: 50
+          },
+          category: {
+            type: 'string',
+            example: 'Electronics'
+          },
+          imageUrl: {
+            type: 'string',
+            example: 'http://example.com/image.png'
+          }
+        }
+      },
+      ProductInput: {
+        type: 'object',
+        properties: {
+          name: {
+            type: 'string',
+            example: 'Laptop'
+          },
+          description: {
+            type: 'string',
+            example: 'A powerful laptop'
+          },
+          price: {
+            type: 'number',
+            example: 1200
+          },
+          stock: {
+            type: 'integer',
+            example: 50
+          },
+          category: {
+            type: 'string',
+            example: 'Electronics'
+          },
+          imageUrl: {
+            type: 'string',
+            example: 'http://example.com/image.png'
           }
         }
       }
